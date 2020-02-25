@@ -19,3 +19,19 @@ int main(){
 }
 
 //Write definition of shuffle() here 
+void shuffle(int &w,int &x,int &y,int &z){
+	int arr[]={w,x,y,z};
+	int j,k;
+	for(int i=0; i<10; i++){
+		j=rand()%4;
+		k=rand()%4;
+
+		int temp=arr[j];
+		arr[j]=arr[k];
+		arr[k]=temp;
+	}
+	w=arr[0];
+	x=arr[1];
+	y=arr[2];
+	z=arr[3];
+}
